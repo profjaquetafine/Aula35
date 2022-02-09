@@ -8,7 +8,7 @@ function setup(){
     hypnoticball.shapeColor = "red";
 
     var hypnoticballPosition=database.ref('ball/position');
-    hypnoticballPosition.on("value", readPosition, showError);
+    hypnoticballPosition.on("value",lerposicao, showError);
 }
 
 function draw(){
@@ -41,10 +41,8 @@ function changePosition(x,y){
     
 }
 
-function readPosition(data){
-    position=data.val();
-    hypnoticball.x = position.x
-    hypnoticball.y = position.y
+function lerposicao(data){
+   
 }
 
 function showError(){
